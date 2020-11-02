@@ -2,7 +2,6 @@ package com.example.instaclone.Fragments
 
 import android.os.Bundle
 import android.view.*
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.instaclone.*
@@ -23,9 +22,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (activity as MainActivity?)!!.setSupportActionBar(toolbarHome)
-        (activity as MainActivity?)!!.supportActionBar?.setDisplayShowTitleEnabled(false)
-        setHasOptionsMenu(true)
+
         showStories()
         showPosts()
 
