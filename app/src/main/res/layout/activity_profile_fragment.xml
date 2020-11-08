@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.ProfileFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProfilePosts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/imgUserProfile"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_profile_pic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPostNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="334"
+        app:layout_constraintBottom_toTopOf="@+id/tvPosts"
+        tools:layout_editor_absoluteX="152dp" />
+
+    <TextView
+        android:id="@+id/tvPosts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posts"
+        android:textColor="@android:color/black"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <TextView
+        android:id="@+id/tvFollowersNumbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="211k"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tvFollowers"
+        tools:layout_editor_absoluteX="235dp" />
+
+    <TextView
+        android:id="@+id/tvFollowers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="followers"
+        android:textColor="@android:color/black"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <TextView
+        android:id="@+id/tvFollowingNumbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="76dp"
+        android:text="134"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="39dp" />
+
+    <TextView
+        android:id="@+id/tvFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Following"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/tvFollowingNumbers"
+        tools:layout_editor_absoluteX="306dp" />
+
+    <TextView
+        android:id="@+id/tvProfileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile Name"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="109dp" />
+
+    <TextView
+        android:id="@+id/tvLoreumIpsum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="loreum ipsum, Loreum ipsum"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="137dp" />
+
+    <TextView
+        android:id="@+id/tvBlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blog.loremipsum.com"
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="164dp" />
+
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:text="Edit Profile"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <Button
+        android:id="@+id/btnPromotion"
+        android:layout_width="100dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="28dp"
+        android:text="Promotion"
+        app:layout_constraintBottom_toTopOf="@+id/rvHighlights"
+        app:layout_constraintEnd_toStartOf="@+id/btnContact"
+        app:layout_constraintStart_toEndOf="@+id/btnEditProfile" />
+
+    <Button
+        android:id="@+id/btnContact"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:text="Contact"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="204dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHighlights"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/ic_profile_pic"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
