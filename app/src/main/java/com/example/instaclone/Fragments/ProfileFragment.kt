@@ -1,14 +1,15 @@
 package com.example.instaclone.Fragments
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.instaclone.ProfileGrideAdapter
+import com.example.instaclone.Highlight
 import com.example.instaclone.R
+import com.example.instaclone.adapter.HighlightsAdapter
+import com.example.instaclone.adapter.ProfileGrideAdapter
 import kotlinx.android.synthetic.main.activity_profile_fragment.*
 
 class ProfileFragment : Fragment() {
@@ -23,9 +24,20 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        showHighlights()
         showProfileGlide()
     }
-    fun showProfileGlide(){
+
+    private fun showHighlights() {
+        var highLights = ArrayList<Highlight>()
+        highLights.add(Highlight("https://mobifree.co.ke/storage/2020/09/MyImage1599249777105Image.jpg", "Highlight One"))
+
+        val highLightAdapter = HighlightsAdapter(highLights)
+        rvHighlights.adapter = highLightAdapter
+    }
+
+    fun showProfileGlide() {
         var profilePostList = ArrayList<String>()
         profilePostList.add("https://mobifree.co.ke/storage/2020/09/MyImage1599249777105Image.jpg")
         profilePostList.add("https://mobifree.co.ke/storage/2020/09/MyImage1599249778440Image.jpg")
@@ -50,11 +62,9 @@ class ProfileFragment : Fragment() {
         profilePostList.add("https://m.media-amazon.com/images/I/71SScBzRlYL._AC_SR255,340_.jpg ")
         profilePostList.add("https://m.media-amazon.com/images/I/71SScBzRlYL._AC_SR255,340_.jpg ")
 
-
-
         val profileGrideAdapter = ProfileGrideAdapter(profilePostList)
         rvProfilePosts.layoutManager = GridLayoutManager(context, 3)
-        rvProfilePosts.adapter=profileGrideAdapter
+        rvProfilePosts.adapter = profileGrideAdapter
     }
 
 }

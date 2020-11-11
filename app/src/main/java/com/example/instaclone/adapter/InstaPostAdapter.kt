@@ -1,10 +1,12 @@
-package com.example.instaclone
+package com.example.instaclone.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.instaclone.InstaPost
+import com.example.instaclone.R
 import kotlinx.android.synthetic.main.row_post_item.view.*
 
 class InstaPostAdapter(var instaPostList: List<InstaPost>): RecyclerView.Adapter<InstaPostAdapter.InstaPostViewHolder> (){

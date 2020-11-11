@@ -5,6 +5,8 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.instaclone.*
+import com.example.instaclone.adapter.InstaPostAdapter
+import com.example.instaclone.adapter.StoriesAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
 
 

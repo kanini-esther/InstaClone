@@ -1,4 +1,4 @@
-package com.example.instaclone
+package com.example.instaclone.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
